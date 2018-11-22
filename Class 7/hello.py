@@ -9,7 +9,7 @@ db.init_app(app)
 def hello():
     return render_template("index.html")
 
-@app.route("/control")
+@app.route("/home")
 def home():
     return render_template("index.html")
 
