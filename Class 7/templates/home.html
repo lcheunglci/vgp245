@@ -6,6 +6,13 @@
       
       <div class="section-score">
         <div class="nav">
+
+          <ul>
+              {% for s in my_scores %}
+                 <li> {{s.uid}} : {{ s.score }} </li>
+              {% endfor %}
+          </ul>
+
           <form method="POST" action="/home">
             {{ form.hidden_tag() }}
             

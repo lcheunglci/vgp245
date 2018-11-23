@@ -77,7 +77,10 @@ def home():
   form = ScoreForm()
   
   my_scores = []
-  my_scores = Score.query.filter_by(uid=user.uid)
+  #my_scores = Score.query.filter_by(uid=user.uid)
+  my_scores = Score.query.all()
+
+  print(my_scores)
 
   if request.method == 'POST':
     if form.validate() == False:
